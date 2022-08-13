@@ -422,52 +422,7 @@ static void AppControllerFire(void* pvParameters)
 		}
 		if (RETCODE_OK == retcode)
 		{
-        /*    printf("Accelerometer Converted data :\n\rx =%ld mg\n\ry =%ld mg\n\rz =%ld mg\r\n",
-                    (long int) sensorValue.Accel.X,
-                    (long int) sensorValue.Accel.Y,
-                    (long int) sensorValue.Accel.Z);
 
-            printf("Accelerometer Raw data :\n\rx =%ld \n\ry =%ld\n\rz =%ld\r\n",
-                    (long int) sensorValue.Accel.X,
-                    (long int) sensorValue.Accel.Y,
-                    (long int) sensorValue.Accel.Z);
-
-            printf("BME280 Environmental Conversion Data for Humidity:\n\rh =%ld %%rh\r\n",
-                    (long int) sensorValue.RH);
-
-            printf("BME280 Environmental Conversion Data for Pressure :\n\rp =%ld Pa\r\n",
-                    (long int) sensorValue.Pressure);
-
-            printf("BME280 Environmental Conversion Data for temperature :\n\rt =%ld mDeg\r\n",
-                    (long int) sensorValue.Temp);
-
-            printf("Magnetometer Converted data :\n\rx =%ld microTesla\n\ry =%ld microTesla\n\rz =%ld microTesla\n\rr =%ld\r\n",
-                    (long int) sensorValue.Mag.X,
-                    (long int) sensorValue.Mag.Y,
-                    (long int) sensorValue.Mag.Z,
-                    (long int) sensorValue.Mag.R);
-
-            printf("Magnetometer Raw data :\n\rx =%ld\n\ry =%ld\n\rz =%ld \n\rr =%ld\r\n",
-                    (long int) sensorValue.Mag.X,
-                    (long int) sensorValue.Mag.Y,
-                    (long int) sensorValue.Mag.Z,
-                    (long int) sensorValue.Mag.R);
-
-            printf("Gyro Converted Data :\n\rx =%ld mDeg\n\ry =%ld mDeg\n\rz =%ld mDeg\r\n",
-                    (long int) sensorValue.Gyro.X,
-                    (long int) sensorValue.Gyro.Y,
-                    (long int) sensorValue.Gyro.Z);
-
-            printf("Gyro Raw Data :\n\rx =%ld \n\ry =%ld \n\rz =%ld \r\n",
-                    (long int) sensorValue.Gyro.X,
-                    (long int) sensorValue.Gyro.Y,
-                    (long int) sensorValue.Gyro.Z);
-
-            printf("Light sensor data obtained in millilux :%d \n\r", (unsigned int) sensorValue.Light);
-
-            printf("Noise Sensor RMS Voltage :\r\nVrms = %f \r\n", sensorValue.Noise);
-
-*/
 
 			int32_t length = snprintf((char *) publishBuffer, APP_MQTT_DATA_BUFFER_SIZE, publishDataFormat,
 					(long int) sensorValue.Accel.X,
